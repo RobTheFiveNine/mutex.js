@@ -1,0 +1,15 @@
+{
+  "name": "@robthefivenine/mutex.js",
+  "version": "1.0.0",
+  "description": "A JavaScript mutex and queuing library",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/RobTheFiveNine/mutex.js",
+  "author": "RobTheFiveNine",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@babel/core": "^7.14.6"
+  }
+}
