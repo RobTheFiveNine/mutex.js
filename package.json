@@ -10,6 +10,6 @@
   "author": "RobTheFiveNine",
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "@babel/core": "^7.14.6"
+    "jest": "^27.0.4"
   }
 }
