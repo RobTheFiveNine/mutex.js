@@ -1041,6 +1041,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-runtime@npm:^7.14.5":
+  version: 7.14.5
+  resolution: "@babel/plugin-transform-runtime@npm:7.14.5"
+  dependencies:
+    "@babel/helper-module-imports": ^7.14.5
+    "@babel/helper-plugin-utils": ^7.14.5
+    babel-plugin-polyfill-corejs2: ^0.2.2
+    babel-plugin-polyfill-corejs3: ^0.2.2
+    babel-plugin-polyfill-regenerator: ^0.2.2
+    semver: ^6.3.0
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 5d5683e0962459bec177415aaa6dd1f518252f0b923e5dad77847faccdb2e0d1b15984bc79141d44c9aa8441c1753cc3699858f87975d262132d35c4305f3be0
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-shorthand-properties@npm:^7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-transform-shorthand-properties@npm:7.14.5"
@@ -1218,7 +1234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.8.4":
   version: 7.14.6
   resolution: "@babel/runtime@npm:7.14.6"
   dependencies:
@@ -1528,11 +1544,14 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.14.5
     "@babel/core": ^7.14.6
+    "@babel/plugin-transform-runtime": ^7.14.5
     "@babel/preset-env": ^7.14.5
+    "@babel/runtime": ^7.14.6
     babel-jest: ^27.0.2
     jest: ^27.0.4
-    regenerator-runtime: ^0.13.7
     uuid: ^8.3.2
+  bin:
+    mutex-test: whoami
   languageName: unknown
   linkType: soft
 
@@ -4971,7 +4990,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4":
   version: 0.13.8
   resolution: "regenerator-runtime@npm:0.13.8"
   checksum: 20178f5753f181d59691e5c3b4c59a2769987f75c7ccf325777673b5478acca61a553b10e895585086c222f72f5ee428090acf50320264de4b79f630f7388653
