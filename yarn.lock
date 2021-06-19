@@ -1621,6 +1621,7 @@ __metadata:
     eslint-plugin-import: ^2.23.4
     eslint-plugin-jest: ^24.3.6
     jest: ^27.0.4
+    rimraf: ^3.0.2
     uuid: ^8.3.2
   languageName: unknown
   linkType: soft

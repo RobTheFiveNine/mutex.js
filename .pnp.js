@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:2.23.4"],
             ["eslint-plugin-jest", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:24.3.6"],
             ["jest", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:27.0.4"],
+            ["rimraf", "npm:3.0.2"],
             ["uuid", "npm:8.3.2"]
           ],
           "linkType": "SOFT",
@@ -2794,6 +2795,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:2.23.4"],
             ["eslint-plugin-jest", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:24.3.6"],
             ["jest", "virtual:a43e267f077cf6ef128a2709a7dfe60978c652273d1587f1ea0d4463fe07846c46ee6ecf184d124f8d03d5bd40f5f0eebd0f65eb4abeca957bad8ff4c0254404#npm:27.0.4"],
+            ["rimraf", "npm:3.0.2"],
             ["uuid", "npm:8.3.2"]
           ],
           "linkType": "SOFT",

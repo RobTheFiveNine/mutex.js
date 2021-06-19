@@ -2,7 +2,9 @@
   "name": "@robthefivenine/mutex.js",
   "version": "1.0.0",
   "description": "A mutex library that enables you to synchronise access to resources across an application.",
-  "keywords": ["mutex"],
+  "keywords": [
+    "mutex"
+  ],
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -25,11 +27,14 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.3.6",
-    "jest": "^27.0.4"
+    "jest": "^27.0.4",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "build": "babel src --out-dir dist",
+    "clean": "rimraf dist",
     "lint": "eslint src/",
+    "prepublish": "yarn run clean && yarn build",
     "test": "jest -c jest.config.js",
     "test:ci": "jest -c jest.config.js --coverage"
   },
