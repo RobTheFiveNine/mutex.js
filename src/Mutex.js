@@ -24,12 +24,12 @@ class Mutex {
     }
 
     if (this.#next === ticket) {
-      callback();
-    } else {
-      setImmediate(
-        () => this.#checkLock(ticket, callback, fail),
-      );
+      return callback();
     }
+
+    return setImmediate(
+      () => this.#checkLock(ticket, callback, fail),
+    );
   }
 
   async wait(timeout = 0) {
@@ -45,7 +45,7 @@ class Mutex {
         this.#checkLock(ticket, resolve, reject);
       } else {
         this.#locked = true;
-        return resolve();
+        resolve();
       }
     });
   }
