@@ -1,12 +1,17 @@
 {
   "name": "@robthefivenine/mutex.js",
   "version": "1.0.0",
-  "description": "A JavaScript mutex and queuing library",
+  "description": "A mutex library that enables you to synchronise access to resources across an application.",
+  "keywords": ["mutex"],
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/RobTheFiveNine/mutex.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobTheFiveNine/mutex.js.git"
+  },
+  "bugs": "https://github.com/RobTheFiveNine/mutex.js",
   "author": "RobTheFiveNine",
   "license": "GPL-3.0-only",
   "devDependencies": {
