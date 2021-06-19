@@ -1,3 +1,4 @@
+# yarn
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -5,3 +6,9 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Build fragments
+dist/
+
+# Test fragments
+coverage/

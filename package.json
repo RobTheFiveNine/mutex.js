@@ -18,7 +18,8 @@
     "jest": "^27.0.4"
   },
   "scripts": {
-    "test": "jest"
+    "build": "babel src --out-dir dist",
+    "test": "jest -c jest.config.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.6",
