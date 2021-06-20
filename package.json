@@ -34,7 +34,7 @@
     "build": "babel src --out-dir dist",
     "clean": "rimraf dist",
     "lint": "eslint src/",
-    "prepublish": "yarn run clean && yarn build",
+    "prepack": "yarn run clean && yarn build",
     "test": "jest -c jest.config.js",
     "test:ci": "jest -c jest.config.js --coverage"
   },
