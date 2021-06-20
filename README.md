@@ -1,4 +1,4 @@
-# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/redux-test-utils/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/redux-test-utils?branch=stable)
+# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/mutex.js?branch=stable)
 
 Install
 -------
