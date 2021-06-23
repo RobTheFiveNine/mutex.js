@@ -19,17 +19,5 @@ module.exports = {
     'lines-between-class-members': ['error', 'always', {
       exceptAfterSingleLine: true,
     }],
-
-    /*
-      The import plugin used by airbnb-base is not compatible
-      with @babel/eslint-parser, so these rules need to be
-      disabled.
-    */
-    'import/extensions': 'off',
-    'import/order': 'off',
-    'import/no-self-import': 'off',
-    'import/no-unresolved': 'off',
-    'import/no-useless-path-segments': 'off',
-    'import/no-extraneous-dependencies': 'off',
   },
 };
