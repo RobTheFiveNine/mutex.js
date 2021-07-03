@@ -1,11 +1,12 @@
 {
   "name": "@robthefivenine/mutex.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mutex library that enables you to synchronise access to resources across an application.",
   "keywords": [
     "mutex"
   ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -32,7 +33,7 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist && cp src/*.ts dist/",
     "clean": "rimraf dist",
     "lint": "eslint src/",
     "prepack": "yarn run clean && yarn build",
