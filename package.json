@@ -1,6 +1,6 @@
 {
   "name": "@robthefivenine/mutex.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A mutex library that enables you to synchronise access to resources across an application.",
   "keywords": [
     "mutex"
