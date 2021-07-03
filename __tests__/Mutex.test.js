@@ -61,7 +61,7 @@ describe('.prototype.wait(timeout)', () => {
       const mutex = new Mutex();
       const callback = jest.fn(() => mutex.release());
 
-      await mutex.wait()
+      await mutex.wait();
       mutex.wait().then(() => {
         setTimeout(() => {
           callback(0);
