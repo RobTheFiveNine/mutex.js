@@ -17,6 +17,7 @@ class Mutex {
   #checkLock(ticket, callback, fail) {
     if (ticket.timeout > 0) {
       if ((Date.now() - ticket.created) > ticket.timeout) {
+        this.#queue = this.#queue.filter((t) => t !== ticket);
         return fail(
           new Error('Failed to acquire lock'),
         );

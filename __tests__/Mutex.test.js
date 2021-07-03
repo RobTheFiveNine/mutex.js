@@ -42,6 +42,18 @@ describe('.prototype.wait(timeout)', () => {
         'Failed to acquire lock',
       );
     });
+
+    it('should not prevent future acquisitions', async () => {
+      const mutex = new Mutex();
+      await mutex.wait();
+
+      await expect(mutex.wait(500)).rejects.toThrow(
+        'Failed to acquire lock',
+      );
+
+      mutex.release();
+      await expect(mutex.wait(500)).resolves.not.toThrow();
+    });
   });
 
   describe('when the lock is released', () => {
