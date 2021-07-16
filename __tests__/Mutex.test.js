@@ -1,5 +1,9 @@
 const Mutex = require('../src/Mutex');
 
+beforeEach(() => {
+  Mutex.removeAll();
+});
+
 describe('.prototype.isLocked', () => {
   describe('if the mutex is locked', () => {
     it('should return true', async () => {
@@ -118,5 +122,68 @@ describe('.getMutex(name)', () => {
       expect(newMutex).not.toBe(mutex);
       expect(newMutex).not.toBe(existing);
     });
+  });
+});
+
+describe('.getAllMutexes()', () => {
+  it('should return an array of registered mutexes', () => {
+    Mutex.getMutex('mutex1');
+    Mutex.getMutex('mutex2');
+    Mutex.getMutex('mutex3');
+
+    const mutexes = Mutex.getAllMutexes();
+    expect(mutexes).toHaveLength(3);
+
+    for (let i = 0; i < mutexes.length; i += 1) {
+      expect(mutexes[i].name).toEqual(`mutex${i + 1}`);
+    }
+  });
+});
+
+describe('.remove(name)', () => {
+  it('should release and remove the matching mutex', async () => {
+    Mutex.getMutex('mutex1');
+    Mutex.getMutex('mutex2');
+    const mutex = Mutex.getMutex('mutex3');
+
+    await mutex.wait();
+
+    Mutex.remove('mutex3');
+    expect(mutex.isLocked).toBe(false);
+
+    const mutexes = Mutex.getAllMutexes();
+    expect(mutexes).toHaveLength(2);
+
+    for (let i = 0; i < mutexes.length; i += 1) {
+      expect(mutexes[i].name).toEqual(`mutex${i + 1}`);
+    }
+  });
+
+  describe('if `name` does not exist', () => {
+    it('should not throw an error', () => {
+      expect(() => Mutex.remove('does-not-exist')).not.toThrow();
+    });
+  });
+});
+
+describe('.removeAll()', () => {
+  it('should release and remove all registered mutexes', async () => {
+    const initialMutexes = [
+      Mutex.getMutex('mutex1'),
+      Mutex.getMutex('mutex2'),
+      Mutex.getMutex('mutex3'),
+    ];
+
+    await Promise.all(
+      initialMutexes.map((m) => m.wait()),
+    );
+
+    Mutex.removeAll();
+
+    initialMutexes.forEach(
+      (m) => expect(m.isLocked).toBe(false),
+    );
+
+    expect(Mutex.getAllMutexes()).toHaveLength(0);
   });
 });

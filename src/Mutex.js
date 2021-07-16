@@ -6,7 +6,7 @@ class Mutex {
   #locked
   #next
 
-  static #namedMutexes = [];
+  static #namedMutexes = {};
 
   constructor(name) {
     this.#name = name;
@@ -69,10 +69,33 @@ class Mutex {
 
   static getMutex(name) {
     if (!this.#namedMutexes[name]) {
-      this.#namedMutexes[name] = new Mutex(name);
+      this.#namedMutexes[name] = new this(name);
     }
 
     return this.#namedMutexes[name];
+  }
+
+  static getAllMutexes() {
+    return Object.keys(this.#namedMutexes).map(
+      (k) => this.#namedMutexes[k],
+    );
+  }
+
+  static remove(name) {
+    const mutex = this.#namedMutexes[name];
+
+    if (mutex) {
+      mutex.release();
+      delete this.#namedMutexes[name];
+    }
+  }
+
+  static removeAll() {
+    this.getAllMutexes().forEach(
+      (m) => m.release(),
+    );
+
+    this.#namedMutexes = {};
   }
 }
 
