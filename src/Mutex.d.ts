@@ -11,6 +11,27 @@ declare class Mutex {
   static getMutex(name: string): Mutex;
 
   /**
+   * Returns all globally registered mutexes created using
+   * `Mutex.getMutex`.
+   */
+  static getAllMutexes(): Array<Mutex>;
+
+  /**
+   * Release and remove a globally registered mutex
+   * created using `Mutex.getMutex` with a matching
+   * `name`.
+   * 
+   * @param name The name of the mutex to remove.
+   */
+  static remove(name: string): void;
+
+  /**
+   * Release and remove all globally registered
+   * mutexes created using `Mutex.getMutex`.
+   */
+  static removeAll(): void;
+
+  /**
    * Creates a new Mutex object.
    *
    * @param name An optional name used to identify
