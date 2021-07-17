@@ -1,4 +1,4 @@
-# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/mutex.js?branch=stable)
+# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/mutex.js?branch=stable) ![npm downloads](https://img.shields.io/npm/dt/@robthefivenine/mutex.js) ![npm (scoped)](https://img.shields.io/npm/v/@robthefivenine/mutex.js)
 
 Install
 -------
@@ -94,6 +94,15 @@ The constructor accepts an optional string in `name`. The name is not required t
 Gets the globally registered mutex corresponding to `name`. If a mutex has not already been created for `name`, one will be created and returned.
 
 This is the preferred method to create mutexes when they must be shared in a global context.
+
+#### Mutex.getAllMutexes()
+Returns all globally registered mutexes created using `Mutex.getMutex`.
+
+#### Mutex.remove(name)
+Release and remove a globally registered mutex created using `Mutex.getMutex` with a matching `name`.
+
+#### Mutex.removeAll()
+Release and remove all globally registered mutexes created using `Mutex.getMutex`.
 
 ### Instance Properties
 
