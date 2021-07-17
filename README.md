@@ -1,4 +1,4 @@
-# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/mutex.js?branch=stable) ![npm downloads](https://img.shields.io/npm/dt/@robthefivenine/mutex.js) ![npm (scoped)](https://img.shields.io/npm/v/@robthefivenine/mutex.js)
+# mutex.js [![](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml/badge.svg?branch=stable)](https://github.com/RobTheFiveNine/mutex.js/actions/workflows/test.yml) [![](https://coveralls.io/repos/github/RobTheFiveNine/mutex.js/badge.svg?branch=stable)](https://coveralls.io/github/RobTheFiveNine/mutex.js?branch=stable) [![npm downloads](https://img.shields.io/npm/dt/@robthefivenine/mutex.js)](https://www.npmjs.com/package/@robthefivenine/mutex.js) [![npm (scoped)](https://img.shields.io/npm/v/@robthefivenine/mutex.js)](https://www.npmjs.com/package/@robthefivenine/mutex.js)
 
 Install
 -------
